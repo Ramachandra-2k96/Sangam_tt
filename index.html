@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        body{
+            margin: auto;
+            font-weight: 600;
+            transition: background-color 0.5s ease-in-out;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #time_table{
+            margin: auto;
+            border-collapse: collapse;
+            align-items: center;
+            table-layout: fixed;
+            transition: transform 0.3s ease-in-out;
+        }
+        #time_table:hover{
+            transform: scale(1.01);
+        }
+        th{
+            border: 2px solid black;
+            padding: 8px;
+            font-style: bold;
+            background-color: yellow;
+        }
+        .headding{
+            background-color: aliceblue;
+        }
+       td{
+            border: 2px solid black;
+            text-align: center;
+            background-color: white;
+            padding: 8px;
+            transition: transform 0.2s ease-in-out;
+       }
+       td:hover{
+        transform: scale(1.1);
+        background-color: rgb(186, 187, 191);
+       }
+       .holiday{
+        color: red;
+       }
+       .day{
+        background-color: antiquewhite;
+       }
+       .daycol{
+        background-color: yellow;
+        font-style: bold;
+        font-weight: 900;
+       }
+       .python{
+        color: brown;
+       }
+       .java{
+        color:blue;
+       }
+    </style>
+    <body>
+       <h1>Fun with Programming</h1>
+        <table id="time_table" width="700px">
+            <thead><tr><th colspan="7" class="headding">Timings in IST -<a href="https://whereby.com/sangamone" target="_blank">https://whereby.com/sangamone</a></th></tr></thead>
+            <tbody>
+                <tr>
+                    <th class="day">Day</th>
+                    <th>05:00</th>
+                    <th>05:30</th>
+                    <th>06:30</th>
+                    <th>11:00</th>
+                    <th>12:00</th>
+                    <th>19:00</th>
+                </tr>
+                <tr>
+                    <td class="daycol">Mon</td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td class="java">Java</td>
+                    <td></td>
+                    <td></td>
+                    <td class="java">Java</td>
+                </tr>
+                <tr>
+                    <td class="daycol">Tue</td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td class="java">Java</td>
+                    <td></td>
+                    <td></td>
+                    <td class="python">Python</td>
+                </tr>
+                <tr>
+                    <td class="daycol">Wed</td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td class="java">Java</td>
+                    <td></td>
+                    <td></td>
+                    <td class="java">Java</td>
+                </tr>
+                <tr>
+                    <td class="daycol">Thu</td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td class="java">Java</td>
+                    <td></td>
+                    <td></td>
+                    <td class="python">Python</td>
+                </tr>
+                <tr>
+                    <td class="daycol">Fri</td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td class="java">Java</td>
+                    <td></td>
+                    <td></td>
+                    <td class="java">Java</td>
+                </tr>
+                <tr>
+                    <td class="holiday daycol">Sat</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="holiday daycol">Sun</td>
+                    <td></td>
+                    <td style="color: blueviolet;">Javascript</td>
+                    <td></td>
+                    <td class="python">Python</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    <script>
+        var i=0;
+        document.addEventListener("DOMContentLoaded", function() {
+            changeBackgroundColor();
+            setInterval(changeBackgroundColor,2000);
+        });
+        function changeBackgroundColor() {
+            var body = document.body;
+            var colors = ["#ff9999", "#ffcc99", "#ffff99", "#ccff99", "#99ff99", "#99ffcc", "#99ffff", "#99ccff", "#9999ff", "#cc99ff", "#ff99ff", "#ff99cc", "#ff6666"];
+            if(i>13){
+                i=0;
+            }
+            body.style.backgroundColor = colors[++i];
+        }
+    </script>
+</html>
